@@ -1,71 +1,110 @@
-html, body {
-    height: 100%;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* FLEX LAYOUT FOR FOOTER FIX */
 body {
     display: flex;
     flex-direction: column;
 }
 
+/* MAIN CONTENT PUSH FOOTER DOWN */
 .main-content {
     flex: 1;
 }
 
+/* HEADER */
 header {
-    background: linear-gradient(45deg, #ff4d4d, #ff944d);
+    background: linear-gradient(135deg, #ff4d4d, #ff944d);
     color: white;
-    padding: 30px;
     text-align: center;
+    padding: 40px 20px;
 }
 
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* NAVBAR */
 nav {
-    background-color: #333;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 12px;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
     color: white;
-    margin: 15px;
     text-decoration: none;
+    margin: 10px 15px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #ff944d;
 }
 
+/* SECTIONS */
 section {
-    padding: 25px;
     background: white;
-    margin: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 h2 {
     color: #ff4d4d;
+    margin-bottom: 15px;
 }
 
+/* LISTS */
 ul {
+    padding-left: 20px;
     line-height: 1.8;
 }
 
+/* IMAGES */
 img {
     width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    margin: 10px 0;
+    max-width: 600px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* BUTTONS */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 20px;
     background: #ff4d4d;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    margin-top: 10px;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -73,9 +112,11 @@ img {
     transform: scale(1.05);
 }
 
+/* FOOTER (FIXED) */
 footer {
     text-align: center;
-    padding: 15px;
-    background: #222;
+    padding: 20px;
+    background: #111;
     color: white;
+    margin-top: auto;
 }
