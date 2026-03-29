@@ -1,0 +1,1 @@
+console.log("QuickBite Nepal Website Loaded");
